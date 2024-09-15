@@ -20,7 +20,7 @@ from app.components import (
     dataframe,
     button,
 )
-from app.utils import (
+from app.data_utils import (
     get_csv_files,
     parse_course_data,
     randomize_results,

@@ -1,24 +1,28 @@
 """
 File: app.py
 Author: Dmitry Ryumin
-Description: Main application file for ArenaVSRS.
-             The file defines the Gradio interface, sets up the main blocks and tabs,
-             and includes event handlers for various components.
+Description: Создание и настройка Gradio приложения (основные блоки и вкладки)
 License: MIT License
 """
 
 import gradio as gr
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
 from app.config import CONFIG_NAME, config_data, load_tab_creators
 from app.event_handlers.event_handlers import setup_app_event_handlers
 import app.tabs
-
 
 gr.set_static_paths(paths=[config_data.StaticPaths_IMAGES])
 
 
 def create_gradio_app() -> gr.Blocks:
+    """
+    Создание и настройка Gradio приложения
+
+    Returns:
+        gr.Blocks: Объект Gradio Blocks, представляющий UI приложения
+    """
+
     with gr.Blocks(
         theme=gr.themes.Default(), css=config_data.AppSettings_CSS_PATH
     ) as gradio_app:
@@ -43,4 +47,8 @@ def create_gradio_app() -> gr.Blocks:
 
 
 if __name__ == "__main__":
-    create_gradio_app().queue(api_open=False).launch(share=False)
+    """
+    Точка входа для запуска Gradio приложения
+    """
+
+    create_gradio_app().queue(api_open=False).launch(server_name="0.0.0.0", share=False)

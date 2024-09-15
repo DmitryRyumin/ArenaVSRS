@@ -1,16 +1,27 @@
 """
 File: requirements_app.py
 Author: Dmitry Ryumin
-Description: Project requirements for the Gradio app.
+Description: Зависимости Gradio приложения
 License: MIT License
 """
 
 import pandas as pd
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
+from app.config import config_data
 
 
-def read_requirements_to_df(file_path="requirements.txt"):
+def parse_requirements(file_path: str = "requirements.txt") -> pd.DataFrame:
+    """
+    Чтение файла с зависимостями и преобразование его содержимого в pandas DataFrame
+
+    Args:
+        file_path (str): Путь к файлу зависимостей
+
+    Returns:
+        pd.DataFrame: Таблица с данными о библиотеках
+    """
+
     with open(file_path, "r") as file:
         lines = file.readlines()
 
@@ -26,9 +37,9 @@ def read_requirements_to_df(file_path="requirements.txt"):
             library, version = line.split("==")
             data.append(
                 {
-                    "Библиотека": library,
-                    "Рекомендованная версия": version,
-                    "Текущая версия": pypi(library),
+                    config_data.Requirements_LIBRARY: library,
+                    config_data.Requirements_REC_VERSION: version,
+                    config_data.Requirements_CURR_VERSION: pypi(library),
                 }
             )
 

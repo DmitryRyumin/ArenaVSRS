@@ -19,7 +19,7 @@ from app.components import (
     button,
     html_message,
 )
-from app.utils import (
+from app.data_utils import (
     get_csv_files,
     parse_course_data,
     randomize_results,

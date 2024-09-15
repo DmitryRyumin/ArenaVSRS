@@ -64,3 +64,8 @@ DROPDOWN_USER = [
 [DataframeHeaders]
 RESULT = ["Дисциплины", "Уверенность"]
 RU_SUBJECT = "Русскоязычное название дисциплины"
+
+[Requirements]
+LIBRARY = "Библиотека"
+REC_VERSION = "Рекомендованная версия"
+CURR_VERSION = "Текущая версия"

@@ -1,19 +1,19 @@
 """
 File: tabs.py
 Author: Dmitry Ryumin
-Description: Gradio app tabs - Contains the definition of various tabs for the Gradio app interface.
+Description: Вкладки Gradio приложения
 License: MIT License
 """
 
 import gradio as gr
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
 from app.description import DESCRIPTION
 from app.description_steps import STEP_1, STEP_2
 from app.app import APP
 from app.authors import AUTHORS
 from app.config import config_data
-from app.requirements_app import read_requirements_to_df
+from app.requirements_app import parse_requirements
 from app.components import (
     dataframe,
     textbox_create_ui,
@@ -286,7 +286,7 @@ def about_authors_tab():
 
 
 def requirements_app_tab():
-    requirements_df = read_requirements_to_df()
+    requirements_df = parse_requirements()
 
     return dataframe(
         headers=requirements_df.columns.tolist(),

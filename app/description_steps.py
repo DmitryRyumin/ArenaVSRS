@@ -1,11 +1,11 @@
 """
 File: description_steps.py
 Author: Dmitry Ryumin
-Description: Project steps description for the Gradio app.
+Description: Описание шагов Gradio приложения
 License: MIT License
 """
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
 from app.config import config_data
 
 STEPS_TEMPLATE = """\

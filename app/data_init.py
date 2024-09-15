@@ -1,17 +1,17 @@
 """
 File: data_init.py
 Author: Dmitry Ryumin
-Description: Data initialization.
+Description: Начальная загрузка данных
 License: MIT License
 """
 
-import time
+# import time
 import pandas as pd
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
 from app.config import config_data
 from app.rating_utils import get_rows_to_evaluate
-from app.utils import (
+from app.data_utils import (
     get_csv_files,
     load_excel_files,
     parse_course_data,
@@ -19,18 +19,18 @@ from app.utils import (
     wrap_subjects,
 )
 
-start_time = time.time()
+# start_time = time.time()
 csv_vsa_files = get_csv_files(config_data.StaticPaths_VSA)
-end_time = time.time()
-execution_time = end_time - start_time
-print(f"Время выполнения 1: {execution_time:.3f} секунд")
+# end_time = time.time()
+# execution_time = end_time - start_time
+# print(f"Время выполнения 1: {execution_time:.3f} секунд")
 
 
-start_time = time.time()
+# start_time = time.time()
 csv_vsa_files = get_csv_files(config_data.StaticPaths_VSA)
-end_time = time.time()
-execution_time = end_time - start_time
-print(f"Время выполнения 1: {execution_time:.3f} секунд")
+# end_time = time.time()
+# execution_time = end_time - start_time
+# print(f"Время выполнения 1: {execution_time:.3f} секунд")
 
 ratings_files = get_csv_files(config_data.StaticPaths_ARENA)
 

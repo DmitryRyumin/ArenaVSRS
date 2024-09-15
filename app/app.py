@@ -1,7 +1,7 @@
 """
 File: app.py
 Author: Dmitry Ryumin
-Description: About the app.
+Description: О Gradio приложении
 License: MIT License
 """
 

@@ -1,13 +1,13 @@
 """
 File: event_handlers.py
 Author: Dmitry Ryumin
-Description: File containing functions for configuring event handlers for Gradio components.
+Description: Обработчики событий для Gradio компонентов
 License: MIT License
 """
 
 import gradio as gr
 
-# Importing necessary components for the Gradio app
+# Импорт необходимых компонентов для Gradio приложения
 # from app.event_handlers.page_refresh import event_handler_page_refresh
 from app.event_handlers.auth import event_handler_auth
 from app.event_handlers.login import event_handler_login

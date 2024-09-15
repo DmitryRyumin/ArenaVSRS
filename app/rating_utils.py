@@ -8,7 +8,7 @@ License: MIT License
 from typing import List, Dict
 
 # Importing necessary components for the Gradio app
-from app.utils import read_csv_file
+from app.data_utils import read_csv_file
 
 
 def get_existing_ids(
