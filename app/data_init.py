@@ -19,12 +19,6 @@ from app.data_utils import (
     wrap_subjects,
 )
 
-# start_time = time.time()
-csv_vsa_files = get_csv_files(config_data.StaticPaths_VSA)
-# end_time = time.time()
-# execution_time = end_time - start_time
-# print(f"Время выполнения 1: {execution_time:.3f} секунд")
-
 
 # start_time = time.time()
 csv_vsa_files = get_csv_files(config_data.StaticPaths_VSA)
